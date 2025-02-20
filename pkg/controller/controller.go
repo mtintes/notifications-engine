@@ -172,6 +172,7 @@ func (c *notificationController) Run(threadiness int, stopCh <-chan struct{}) {
 	defer c.queue.ShutDown()
 
 	log.Warn("Controller is running.")
+	log.Warn("Threadiness: ", threadiness)
 	for i := 0; i < threadiness; i++ {
 		go wait.Until(func() {
 			for c.processQueueItem() {
