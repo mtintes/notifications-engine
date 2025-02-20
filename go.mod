@@ -1,4 +1,4 @@
-module github.com/argoproj/notifications-engine
+module github.com/mtintes/notifications-engine
 
 go 1.21
 
